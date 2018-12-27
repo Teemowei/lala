@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <title>Document</title>
+  <script src="https://cdn.bootcss.com/zepto/1.2.0/zepto.js"></script>
+  <script src="https://cdn.bootcss.com/touchjs/0.2.14/touch.js"></script>
+  <style>
+    div {
+      width: 100px;
+      height: 100px;
+      background: rgb(204, 204, 204);
+      margin: 10px auto;
+      transition: 0.5s ease all;
+    }
+
+    p {
+      display: none;
+      font: 24px/100px "";
+      text-align: center;
+      transition: 0.5s ease all;
+    }
+    h3{
+      width:100px;
+      margin:30px auto;
+    }
+  </style>
+  <script>
+    $(function () {
+      // var box2 = document.querySelectorAll("div")[1];
+
+      touch.on($("div:nth-child(1)"), "tap", function (ev) {
+        // this==原生
+        $(this).css("background", "#f99");
+        $('#a').css('display', 'block')
+      });
+
+      touch.on('div:nth-child(2)', 'tap', function (ev) {
+        // this==原生
+        $(this).css('background', '#f99')
+        $('#b').css('display', 'block')
+      })
+      touch.on('div:nth-child(3)', 'tap', function (ev) {
+        // this==原生
+        $(this).css('background', '#f99')
+        $('#c').css('display', 'block')
+      })
+      touch.on('div:nth-child(4)', 'tap', function (ev) {
+        // this==原生
+        $(this).css('background', '#f99')
+        $('#d').css('display', 'block')
+      })
+
+    });
+  </script>
+</head>
+
+<body>
+  <div>
+    <p id="a">你</p>
+  </div>
+  <div>
+    <p id="b">最</p>
+  </div>
+  <div>
+    <p id="c">好</p>
+  </div>
+  <div>
+    <p id="d">看</p>
+  </div>
+  <h3>点击小方块</h3>
+</body>
+
+</html>
